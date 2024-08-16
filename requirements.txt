@@ -1,0 +1,8 @@
+Django~=5.1
+rest_framework
+fastapi
+cars.models
+cars.crud
+pydantic
+cars
+Runtime

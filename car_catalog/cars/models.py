@@ -1,7 +1,17 @@
 from django.db import models
 from django.db import models
 from django.contrib.auth.models import User
+from pydantic import BaseModel
+from typing import Optional
 
+class Car(BaseModel):
+    id: int
+    model: str
+    price: float
+    year: int
+    mileage: Optional[int] = None
+    description: Optional[str] = None
+    in_stock: bool = True
 
 class Car(models.Model):
     brand = models.CharField(max_length=100)
